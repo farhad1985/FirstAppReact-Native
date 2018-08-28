@@ -21,6 +21,7 @@ export default class Form  extends Component {
                     style = {styles.inputBox}
                     placeholder = {'Password'} 
                     placeholderTextColor = 'white'
+                    secureTextEntry = {true}
                 />
                 <TouchableOpacity style = {styles.button}>
                     <Text style = {styles.buttonText}>Login</Text>

@@ -16,7 +16,8 @@ export default class Login extends Component {
                 <Logo />
                 <Form />
                 <View style = {styles.signupText}>
-                    <Text>Don't have an account yes? Signup</Text>
+                    <Text style = {styles.singupText}>Don't have an account yes?  </Text>
+                    <Text style = {styles.singup‌Button}>Singup</Text>
                 </View>
             </View>
         )
@@ -33,7 +34,18 @@ const styles = StyleSheet.create({
     }, 
     signupText: {
         flexGrow: 1,
-        alignItems: 'center',
-        justifyContent: 'center'
+        alignItems: 'flex-end',
+        justifyContent: 'center',
+        marginVertical: 16,
+        flexDirection: 'row', 
+    },
+    singupText: {
+        color: 'rgba(255, 255, 255, 0.7)',
+        fontSize: 16
+    }, 
+    singup‌Button: {
+        color: 'white',
+        fontSize: 16,
+        fontWeight: 'bold',
     }
 })
