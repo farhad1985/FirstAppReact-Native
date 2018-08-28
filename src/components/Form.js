@@ -2,19 +2,29 @@ import React, {Component} from 'react'
 import {
     StyleSheet,
     TextInput,
-    View
+    View,
+    Text,
+    TouchableOpacity
 } from 'react-native'
 
 export default class Form  extends Component {
     render() {
-        let emailPlaceHolder = 'Email'
         return (
             <View style = {styles.container}>
                 <TextInput 
                     style = {styles.inputBox}
-                    placeholder = {emailPlaceHolder} 
+                    placeholder = {'Email'} 
                     placeholderTextColor = 'white'
                 />
+
+                <TextInput 
+                    style = {styles.inputBox}
+                    placeholder = {'Password'} 
+                    placeholderTextColor = 'white'
+                />
+                <TouchableOpacity style = {styles.button}>
+                    <Text style = {styles.buttonText}>Login</Text>
+                </TouchableOpacity>
             </View>
         )
     }
@@ -22,7 +32,7 @@ export default class Form  extends Component {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
+        flexGrow: 1,
         justifyContent: 'center',
         alignItems: 'center',
     },
@@ -33,6 +43,20 @@ const styles = StyleSheet.create({
         borderRadius: 25,
         paddingHorizontal: 16,
         fontSize: 16,
-        color: 'white'
+        color: 'white',
+        marginVertical: 10,
+    },
+    buttonText: {
+        fontSize: 16,
+        fontWeight: 'bold',
+        color: 'white',
+        textAlign: 'center'
+    },
+    button: {
+        backgroundColor: '#1c313a',
+        borderRadius: 25,
+        width: 300,
+        marginVertical: 10,
+        paddingVertical: 15
     }
 })
