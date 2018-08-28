@@ -3,24 +3,18 @@ import {
     StyleSheet,
     View,
     Text,
-    NavigatorIOS
+    StatusBar
 } from 'react-native'
-
-import Loggedout from './src/screens/loggedout'
-import LoggedOut from './src/screens/loggedout';
+import Login from './src/screens/Login';
 
 export default class Airbnb extends Component {
-
     render() {
-        return (
-          <NavigatorIOS
-            initialRoute = {{
-              component: Loggedout,
-              title: 'hello dear',
-              passProps: {index: 1}
-            }}
-            style = {{flex: 1}}
-            />
+        return(
+            <Login>
+                <StatusBar
+                barStyle = 'light-content'
+                />
+             </Login>
         )
     }
 }
