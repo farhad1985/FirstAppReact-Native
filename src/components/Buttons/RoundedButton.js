@@ -3,9 +3,11 @@ import React, {Component} from 'react'
 import {
     StyleSheet,
     Text,
-    TouchableHighlight
+    TouchableHighlight,
+    View
 } from 'react-native'
 import Colors from '../../styles/colors'
+import Icon from 'react-native-vector-icons/dist/FontAwesome'
 
 export default class RoundedButton extends Component {
     render() {
@@ -13,8 +15,12 @@ export default class RoundedButton extends Component {
             <TouchableHighlight 
                 style = {[styles.wrapper, {backgroundColor: this.props.background}]}
                 onPress = {this.props.handleOnPress}
-            >
-                <Text style = {[styles.buttonText, {color: this.props.textColor}]}>{this.props.text}</Text>
+            > 
+                 <View>
+                    <Text style = {[styles.buttonText, {color: this.props.textColor}]}>
+                        {this.props.text}
+                    </Text>
+                </View>
             </TouchableHighlight>
         )
     }

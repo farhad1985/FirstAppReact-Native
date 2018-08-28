@@ -12,7 +12,8 @@ import Colors from '../styles/colors'
 
 export default class LoggedOut extends Component {
     handleOnPress() {
-        Alert.alert('hello')
+        Alert.alert('hello')   
+        console.log('test')     
     }
     render() {
         return (
@@ -57,5 +58,8 @@ const styles = StyleSheet.create( {
         color: colors.white,
         fontWeight: '200',
         marginBottom: 40
+    }, 
+    facebookButtonIcon: {
+
     }
 })
