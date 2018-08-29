@@ -6,8 +6,14 @@ import {
     Text,
     TouchableOpacity
 } from 'react-native'
+import {createStackNavigator} from 'react-navigation'
 
-export default class Form  extends Component {
+export default class Form extends Component {
+
+    constructor(props) {
+        super(props)
+    }
+
     render() {
         return (
             <View style = {styles.container}>
@@ -23,8 +29,9 @@ export default class Form  extends Component {
                     placeholderTextColor = 'white'
                     secureTextEntry = {true}
                 />
-                <TouchableOpacity style = {styles.button}>
-                    <Text style = {styles.buttonText}>Login</Text>
+                <TouchableOpacity style = {styles.button} >
+                    <Text style = {styles.buttonText}>{this.props.type}</Text>
+
                 </TouchableOpacity>
             </View>
         )
@@ -40,7 +47,7 @@ const styles = StyleSheet.create({
     inputBox: {
         width: 300,
         height: 50,
-        backgroundColor: 'rgba(255, 255, 255, 0.3)',
+        backgroundColor: 'rgba(255, 255, 255, 0.2)',
         borderRadius: 25,
         paddingHorizontal: 16,
         fontSize: 16,

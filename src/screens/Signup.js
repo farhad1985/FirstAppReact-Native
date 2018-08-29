@@ -3,8 +3,6 @@ import {
     StyleSheet,
     View,
     Text,
-    TouchableOpacity,
-    StatusBar
 } from 'react-native'
 
 import Logo from '../components/Logo'
@@ -15,21 +13,16 @@ export default class Login extends Component {
         return (
             <View style = {styles.container}>
                 <Logo />
-                <Form type = "Login"/>
+                <Form type = "Singup"/>
                 <View style = {styles.signupText}>
-                    <Text style = {styles.singupText}>Don't have an account yes?  </Text>
-                    <TouchableOpacity 
-                        title="Singup" 
-                        onPress = {() => this.props.navigation.navigate('SignUp')}
-                    >
-                    <Text style = {styles.singup‌Button} >Singup</Text>
-
-                    </TouchableOpacity>
+                    <Text style = {styles.singupText}>Already have an account? </Text>
+                    <Text style = {styles.singup‌Button}>Sign in</Text>
                 </View>
             </View>
         )
     }
 }
+
 
 const styles = StyleSheet.create({
     container: {

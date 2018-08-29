@@ -2,19 +2,38 @@ import React, {Component} from 'react'
 import {
     StyleSheet,
     View,
-    Text,
-    StatusBar
 } from 'react-native'
+
+import { createStackNavigator } from 'react-navigation';
+
+import SignUp from './src/screens/Signup'
 import Login from './src/screens/Login';
 
-export default class Airbnb extends Component {
+export default class MyApp extends Component {
     render() {
         return(
-            <Login>
-                <StatusBar
-                barStyle = 'light-content'
-                />
-             </Login>
+            <View style = {styles.container}>
+                {/* <StatusBar barStyle='light-content' /> */}
+                <RootStack />
+            </View>
         )
     }
 }
+
+const styles = StyleSheet.create({
+    container: {
+        backgroundColor: '#455a64',
+        flex: 1
+    }, 
+})
+
+const RootStack = createStackNavigator(
+    {
+      Login: Login,
+      SignUp: SignUp
+    },
+    {
+        initialRouteName: 'Login'
+    }
+    
+)
