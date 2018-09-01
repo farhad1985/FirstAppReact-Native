@@ -4,13 +4,16 @@ import {
     View,
     Text,
     TouchableOpacity,
-    StatusBar
 } from 'react-native'
 
 import Logo from '../components/Logo'
 import Form from '../components/Form'
 
 export default class Login extends Component {
+    static navigationOptions = {
+        title: 'Home',
+      };
+    
     render() {
         return (
             <View style = {styles.container}>
@@ -20,7 +23,7 @@ export default class Login extends Component {
                     <Text style = {styles.singupText}>Don't have an account yes?  </Text>
                     <TouchableOpacity 
                         title="Singup" 
-                        onPress = {() => this.props.navigation.navigate('SignUp')}
+                        onPress = {() => this.props.navigation.push('SignUp')}
                     >
                     <Text style = {styles.singup‌Button} >Singup</Text>
 

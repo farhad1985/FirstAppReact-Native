@@ -13,7 +13,6 @@ export default class MyApp extends Component {
     render() {
         return(
             <View style = {styles.container}>
-                {/* <StatusBar barStyle='light-content' /> */}
                 <RootStack />
             </View>
         )
